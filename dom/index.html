@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="lang">
+        <li>Python</li>
+    </ul>
+    <script>
+        function addElement(language){
+            const li  = document.createElement('li')
+            li.appendChild(document.createTextNode(language))
+            document.querySelector('.lang').appendChild(li)
+
+
+        }
+        addElement("Java")
+        addElement("Node")
+
+        // Edit 
+        const Edit = document.querySelector("li:nth-child(2)")
+        // Edit.innerHTML = "JavaScript";
+        const newli = document.createElement('li')
+        newli.textContent = "JavaScript"
+        Edit.replaceWith(newli)  
+
+        // edit
+        const first = document.querySelector('li:first-child')
+        first.outerHTML = "<li> TypeScript </li>"
+
+
+        // remove
+
+        const Remove = document.querySelector('li:last-child')
+        Remove.remove()
+
+
+    </script>
+</body>
+</html>
